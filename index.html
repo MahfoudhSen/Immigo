@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigo - Your Guide to a New Life</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom styles -->
+    <style>
+        /* Custom gradient background for hero section */
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-indigo-600">Immigo</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-indigo-600 transition-colors">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors">About</a>
+                    <a href="#login" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Login/Sign Up</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-indigo-600 transition-colors">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors">About</a>
+                    <a href="#login" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-center">Login/Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Hero Content -->
+            <div class="animate-fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Welcome to Your New Life
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-indigo-100">
+                    Find legal resources, housing, jobs, and community support all in one place.
+                </p>
+                <!-- Call-to-Action Button -->
+                <button class="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                    Get Started Today
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section id="services" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What We Offer</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive support services to help you build a successful life in your new home.
+                </p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Legal Help -->
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Legal Help</h3>
+                    <p class="text-gray-600">Access to immigration lawyers, legal resources, and guidance through complex processes.</p>
+                </div>
+                
+                <!-- Housing -->
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Housing</h3>
+                    <p class="text-gray-600">Find safe, affordable housing options and connect with landlords who welcome newcomers.</p>
+                </div>
+                
+                <!-- Jobs -->
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Job Opportunities</h3>
+                    <p class="text-gray-600">Discover employment opportunities, career training, and professional development resources.</p>
+                </div>
+                
+                <!-- Translations -->
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Translation Support</h3>
+                    <p class="text-gray-600">Get help with document translation, interpretation services, and language learning resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Getting help is simple. Follow these three easy steps to start your journey.
+                </p>
+            </div>
+            
+            <!-- Steps Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Create Your Profile</h3>
+                    <p class="text-gray-600">Sign up and tell us about your needs, location, and goals. Your information is kept private and secure.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Get Matched</h3>
+                    <p class="text-gray-600">We'll connect you with relevant services, resources, and community members who can help.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Start Building</h3>
+                    <p class="text-gray-600">Begin your journey with confidence, knowing you have a supportive community behind you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Stories Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Real Stories</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Hear from people who have successfully built new lives with Immigo's support.
+                </p>
+            </div>
+            
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">👨‍👩‍👧‍👦</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Maria & Family</h4>
+                            <p class="text-sm text-gray-600">From Mexico, 2 years ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Immigo helped us find affordable housing and connect with other families in our neighborhood. The legal support was invaluable during our application process."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">👨‍💼</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ahmed</h4>
+                            <p class="text-sm text-gray-600">From Syria, 1 year ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The job placement program helped me find work in my field. The translation services made all the difference when applying for positions."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">👩‍🎓</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Elena</h4>
+                            <p class="text-sm text-gray-600">From Ukraine, 6 months ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"I was able to continue my education thanks to Immigo's resources. The community here made me feel welcome from day one."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Community Section -->
+    <section id="login" class="py-20 px-4 bg-indigo-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Section Header -->
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the Community</h2>
+                <p class="text-xl text-indigo-100">
+                    Start your journey today and connect with thousands of others building new lives.
+                </p>
+            </div>
+            
+            <!-- Sign-up Form -->
+            <div class="max-w-md mx-auto">
+                <form class="space-y-4">
+                    <div>
+                        <input type="email" placeholder="Enter your email" 
+                               class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Create a password" 
+                               class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Create Account
+                    </button>
+                </form>
+                
+                <!-- Login Link -->
+                <p class="mt-6 text-indigo-100">
+                    Already have an account? 
+                    <a href="#" class="underline hover:text-white transition-colors">Sign in here</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-4">Immigo</h3>
+                    <p class="text-gray-300 mb-4">
+                        Supporting immigrants in building successful new lives through comprehensive resources and community connections.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">📘</a>
+                        <a href="#" class="text-gray-300 hover:text-white">📷</a>
+                        <a href="#" class="text-gray-300 hover:text-white">🐦</a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📧 hello@immigo.org</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📍 123 Community St, City, State</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Immigo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
