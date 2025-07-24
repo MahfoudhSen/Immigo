@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Immigo – Welcome</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 flex items-center justify-center min-h-screen">
+
+  <div id="login-container" class="bg-white p-6 rounded shadow w-full max-w-sm">
+    <h2 class="text-2xl font-bold mb-4">Sign In</h2>
+    <input id="email" type="email" placeholder="Email" class="border rounded w-full p-2 mb-3">
+    <input id="password" type="password" placeholder="Password" class="border rounded w-full p-2 mb-4">
+    <button onclick="login()" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Sign In</button>
+  </div>
+
+  <div id="main-container" class="hidden flex-col items-center space-y-4">
+    <h1 class="text-3xl font-bold">Welcome to Immigo</h1>
+    <div class="space-x-2">
+      <button id="housing-btn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">Housing</button>
+      <button id="jobs-btn" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors">Jobs</button>
+      <button id="legal-btn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">Legal Help</button>
+      <button id="translation-btn" class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition-colors">Translation</button>
+    </div>
+    <div class="mt-4">
+      <button id="signin-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Sign In</button>
+    </div>
+  </div>
+
+</body>
+</html> 
